@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/vaaradhitours   # ← replace with your GitHub repo
+  repo: mkmdp2020/vaaradhitours
   branch: main
   auth_type: pkce
   app_id: Ov23lijIxDMUw6kDoUTR
