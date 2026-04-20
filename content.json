@@ -1,0 +1,129 @@
+{
+  "hero": {
+    "badge": "For Indian Travelers in Transit → UK Stopover",
+    "title": "Turn Your UK Stopover Into",
+    "titleHighlight": "An Unforgettable Adventure",
+    "subtitle": "Transiting through the UK on your way to the US or beyond? Don't sit at the airport — London is waiting for you.",
+    "stats": [
+      { "value": "8h",   "label": "Minimum stopover" },
+      { "value": "2",    "label": "Days maximum" },
+      { "value": "30+",  "label": "Curated experiences" },
+      { "value": "100%", "label": "India-focused" }
+    ]
+  },
+
+  "whoFor": {
+    "yes":     ["You are eligible for a UK stopover visa", "Flying through UK (LHR / LGW / MAN)", "Final destination: USA, Canada, Australia, etc.", "You have 8 hours to 2 days here"],
+    "no":      ["You live in the UK", "The UK is your final destination", "You're already on a UK visa", "You have less than 6 hours stopover"],
+    "promise": ["Visa requirements explained simply", "Hour-by-hour itineraries", "Indian food options covered", "Budget-friendly choices"]
+  },
+
+  "visa": {
+    "intro": "Indian passport holders must check transit visa status <strong>before leaving India</strong>. Getting this wrong means being stuck at the airport.",
+    "alertTitle": "⚠️ Two Different Situations — Know Yours",
+    "alertBody": "Whether you need a visa depends on whether you plan to <strong>leave the airport</strong>. Staying airside (inside terminal) has different rules from going out to explore London.",
+    "cards": [
+      { "type": "required", "icon": "🏙️", "title": "Want to Explore London?",      "body": "You <strong>must apply</strong> for a <em>Standard Visitor Visa</em> or <em>Transit Visitor Visa</em> before travel. UK Border Force will not let you exit without it. Apply at least 3–4 weeks in advance on the UK Visas & Immigration portal." },
+      { "type": "free",     "icon": "✈️", "title": "Staying Inside the Airport?",  "body": "If you hold a valid US visa (B1/B2), Canadian, Australian, or Schengen visa, you may be exempt from the Direct Airside Transit Visa (DATV). <strong>Always verify on official UK gov website</strong> — rules change frequently." },
+      { "type": "required", "icon": "📋", "title": "Applying for a Transit Visa",  "body": "Apply online at <strong>gov.uk/transit-visa</strong>. You need your passport, flight details, proof of onward travel (US visa + ticket), and a photo. Processing: 3–8 weeks. Fee: approx. £115." },
+      { "type": "free",     "icon": "🇺🇸", "title": "US Visa Holders — Extra Benefit", "body": "Valid US B1/B2 visa holders with a confirmed onward US ticket may qualify for the <strong>Electronic Travel Authorisation (ETA)</strong> — faster and cheaper than a full visa. Check eligibility on gov.uk/eta." }
+    ],
+    "warning": "🔴 Always check gov.uk for the latest requirements. Vaaradhi Tours provides guidance only — we are not a visa service."
+  },
+
+  "itinerary": {
+    "8h": {
+      "note": "Assumes flight lands ~8:00 AM and you're back at airport by 4:00 PM. Adjust proportionally. Always add 2 hr airport buffer.",
+      "steps": [
+        { "time": "7:00 – 8:30 AM", "icon": "🛬", "title": "Land, Clear Immigration & Store Bags",  "body": "Arrive at Heathrow (LHR). Budget 60–90 mins for UK Border Control. Store bags at airport luggage storage (~£8–12/bag).", "tip": "Eat Indian snacks now — customs may not allow them beyond the airport." },
+        { "time": "8:30 – 9:15 AM", "icon": "🚆", "title": "Heathrow to Central London",            "body": "Heathrow Express → Paddington: 15 mins, every 15 mins (~£25). Or Elizabeth Line (Tube): 45 mins, ~£5.60. Buy an Oyster card at the airport.", "tip": "Elizabeth Line is budget-friendly and scenic. Buy return tickets upfront." },
+        { "time": "9:15 – 10:00 AM","icon": "🌳", "title": "Hyde Park — Morning Stroll",           "body": "10 mins from Paddington. Walk the Serpentine lake, Kensington Gardens. Free entry, beautiful in all weather.", "tip": "" },
+        { "time": "10:00 AM – 12:30 PM","icon":"🌉","title":"Westminster Highlights Walk",          "body": "Big Ben → Houses of Parliament → Westminster Bridge → Victoria Embankment → Buckingham Palace. All within 2 km. Iconic photos guaranteed.", "tip": "Changing of the Guard at Buckingham Palace: 11:00 AM (check — not daily)." },
+        { "time": "12:30 – 1:30 PM","icon": "🍛", "title": "Indian Lunch in Southall",             "body": "30 mins from central London. Authentic Punjabi and South Indian food. Try Brilliant Restaurant or Gifto's Lahore Karahi. Budget: £10–15/person.", "tip": "" },
+        { "time": "1:30 – 2:30 PM", "icon": "🛍️","title": "Quick Shopping",                       "body": "Oxford Street for high-street brands (Primark, M&S, H&M). Southall for Indian clothes, sweets, and travel snacks.", "tip": "" },
+        { "time": "2:30 – 4:00 PM", "icon": "✈️", "title": "Head Back to Heathrow",               "body": "Take Heathrow Express or Elizabeth Line back. Allow 2 hours before departure for international check-in and security.", "tip": "Confirm which terminal your next flight departs from before leaving the city." }
+      ]
+    },
+    "1d": {
+      "note": "A full day (9 AM – 9 PM) gives time for London's iconic sites plus an authentic Indian experience. Stay overnight if needed — budget hotels from £70/night.",
+      "steps": [
+        { "time": "8:00 – 9:30 AM",  "icon": "🌅", "title": "Arrive, Store Bags & Breakfast",   "body": "Store luggage at hotel or airport. Grab breakfast — Pret, Costa, or wait for Indian food in the city.", "tip": "" },
+        { "time": "9:30 – 11:30 AM", "icon": "🎡", "title": "South Bank & London Eye",           "body": "London Eye: 360° city view (book online: £33, 30-min ride). Walk along South Bank — Thames views are free and stunning.", "tip": "Book London Eye tickets 24h in advance — skip the queue, save 20%." },
+        { "time": "11:30 AM – 1:00 PM","icon":"🏰","title":"Tower of London & Tower Bridge",     "body": "Crown Jewels at the Tower (£34) or photograph Tower Bridge for free from outside. One of London's most iconic landmarks.", "tip": "" },
+        { "time": "1:00 – 2:30 PM",  "icon": "🍛", "title": "Lunch at Brick Lane",              "body": "East London street lined with Indian & Bangladeshi restaurants. Great dal, biryani, karahi. Budget: £12–18. Try Aladin or Preem.", "tip": "" },
+        { "time": "2:30 – 4:30 PM",  "icon": "🏛️","title": "British Museum — FREE",            "body": "One of the world's greatest museums — completely free. The South Asia gallery features Mughal art, Hindu sculpture, and artefacts from across the subcontinent.", "tip": "A must-see for Indian visitors — don't miss the South Asia galleries." },
+        { "time": "4:30 – 6:00 PM",  "icon": "🎭", "title": "Covent Garden & Leicester Square", "body": "Street performers at Covent Garden (free), Long Acre shops, Leicester Square. M&Ms World and LEGO Store for kids' gifts.", "tip": "" },
+        { "time": "6:00 – 7:30 PM",  "icon": "🌇", "title": "Sunset — Primrose Hill",           "body": "Panoramic sunset view over London skyline — free, breathtaking, and uncrowded. Or pre-book Sky Garden (rooftop tropical garden, also free).", "tip": "" },
+        { "time": "7:30 – 9:00 PM",  "icon": "🍽️","title": "Dinner in Southall or Wembley",    "body": "Gifto's Lahore Karahi (Southall) for Punjabi food, or Sakonis (Wembley) for vegetarian Gujarati food. Best Indian outside India.", "tip": "" }
+      ]
+    },
+    "2d": {
+      "note": "Two days is a luxury! Day 1 covers London classics. Day 2 goes deeper — a day trip outside London or exploring Indian communities.",
+      "day1Note": "Follow the full 1-Day plan above. Stay at: Travelodge (£70–90/night) or Premier Inn (£80–110/night) near Paddington or Victoria.",
+      "steps": [
+        { "time": "Option A",             "icon": "🏰", "title": "Windsor Castle Day Trip",       "body": "Home of the British Royal Family. Train from Paddington to Windsor: ~£14 return, 50 mins. Walk Windsor town, see the castle, Long Walk. Entry: £30.", "tip": "" },
+        { "time": "Option B",             "icon": "🧱", "title": "Stonehenge & Bath Day Trip",    "body": "Organised coach tours from London: Stonehenge + Roman Baths in Bath. Book via Viator or GetYourGuide (£70–90 including transport). UNESCO World Heritage city.", "tip": "" },
+        { "time": "Option C — India in London","icon":"🏘️","title":"Southall & Wembley — Little India", "body": "Southall Broadway: Punjabi shops, fresh samosas, Indian sweets, Bollywood. Wembley: Gujarati and South Indian food trail. Feels closest to home.", "tip": "" },
+        { "time": "Afternoon",            "icon": "🎨", "title": "V&A Museum — FREE India Galleries","body": "Victoria & Albert Museum has the world's finest Indian art collection outside India — Tipu Sultan's artefacts, Mughal textiles, Hindu deities. Unmissable.", "tip": "" },
+        { "time": "Evening",              "icon": "🛍️", "title": "Final Shopping",               "body": "Harrods for luxury gifts. Primark for clothes. Marks & Spencer for food gifts. Boots for No7 skincare (very popular in India). Claim VAT refund at airport.", "tip": "" }
+      ]
+    }
+  },
+
+  "attractions": [
+    { "emoji": "🏰", "bg": "#1a2a5e", "category": "Historic",      "paid": true,  "name": "Tower of London",     "duration": "1.5–2 hrs", "cost": "£34",  "tube": "Tower Hill",        "description": "UNESCO site with Crown Jewels, Yeomen Warders, and 900 years of royal history. Fascinating connections to India's colonial past." },
+    { "emoji": "🎡", "bg": "#2d1b5e", "category": "Experience",    "paid": true,  "name": "London Eye",          "duration": "30 mins",   "cost": "£33",  "tube": "Waterloo",          "description": "135m observation wheel on the Thames. Best at dusk for magical city lights. Book online in advance for savings and no queue." },
+    { "emoji": "🏛️","bg": "#1a3a2e", "category": "Museum",        "paid": false, "name": "British Museum",      "duration": "2–3 hrs",   "cost": "Free", "tube": "Holborn",           "description": "The South Asia gallery holds incredible artefacts from India — Amaravati sculptures, Mughal art. A must for Indian visitors." },
+    { "emoji": "👑", "bg": "#3a1a2e", "category": "Royal",         "paid": false, "name": "Buckingham Palace",   "duration": "30 mins",   "cost": "Free", "tube": "Victoria",          "description": "Changing of the Guard at 11:00 AM. Walk down The Mall for great photos of the King's official residence." },
+    { "emoji": "🌿", "bg": "#1a3a1a", "category": "Nature",        "paid": false, "name": "Hyde Park",           "duration": "1 hr",      "cost": "Free", "tube": "Hyde Park Corner",  "description": "Serpentine lake, Kensington Gardens, Diana Memorial Fountain. Perfect for an early morning walk or late evening wind-down." },
+    { "emoji": "🎨", "bg": "#3a2a1a", "category": "Art & Culture", "paid": false, "name": "V&A Museum",          "duration": "2 hrs",     "cost": "Free", "tube": "South Kensington",  "description": "World's greatest decorative arts museum. India galleries feature Tipu Sultan's belongings, Mughal jewellery, and intricate textiles." }
+  ],
+
+  "transport": {
+    "options": [
+      { "icon": "🚆", "name": "Heathrow Express",       "description": "Fastest — 15 mins to Paddington. Every 15 mins from 5 AM. Clean and direct with no stops.",                                      "cost": "£25 one-way / £37 return" },
+      { "icon": "🚇", "name": "Elizabeth Line (Tube)",  "description": "Best value. 45–60 mins to central London. Buy an Oyster card or use contactless. Available at airport.",                        "cost": "£5.60 with Oyster card" },
+      { "icon": "🚌", "name": "National Express Coach", "description": "Cheapest but slowest — 60–90 mins to Victoria Coach Station. Book in advance for best prices.",                                  "cost": "£10–16 one-way" },
+      { "icon": "🚕", "name": "Uber / Black Cab",       "description": "Most convenient. Uber cheaper than cabs. Great for groups of 3+ splitting the fare. Uber accepts Indian payment methods.",      "cost": "£40–70 Uber / £70–100 cab" }
+    ],
+    "tips": [
+      { "title": "Oyster Card",   "body": "Tap in/out everywhere. Daily cap ~£15 (Zone 1–2) — you never overpay." },
+      { "title": "Google Maps",   "body": "Download offline maps. Shows Tube + walking. Real-time disruption alerts." },
+      { "title": "Citymapper App","body": "Best London navigation app. Exact walking routes, bus stops, live alerts. Free." },
+      { "title": "Walk More",     "body": "Big Ben→London Eye: 5 min walk. Covent Garden→British Museum: 8 min. London is walkable!" }
+    ]
+  },
+
+  "food": [
+    { "icon": "🏘️", "area": "Southall, West London",  "name": "Little India — Punjabi Heaven",    "body": "Southall Broadway is the most authentic Indian neighbourhood. Fresh samosas, tandoori chicken, mithai shops. Try <strong>Brilliant Restaurant</strong> or <strong>Gifto's Lahore Karahi</strong>. £10–18/person." },
+    { "icon": "🍛", "area": "Brick Lane, East London", "name": "Curry Capital of London",          "body": "Famous street of Indian & Bangladeshi curry houses. Great dal, biryani, karahi. Staff invite you in from the pavement. Try <strong>Aladin</strong> or <strong>Preem</strong>. £12–20/person." },
+    { "icon": "🥗", "area": "Wembley, North London",   "name": "Gujarati & South Indian Food",     "body": "<strong>Sakonis</strong> — legendary vegetarian Gujarati & South Indian (pani puri, dhokla, dosas). Great for vegetarians. <strong>Chetna's</strong> also excellent. £8–14/person." },
+    { "icon": "🍜", "area": "Tooting, South London",   "name": "South Indian & Sri Lankan",        "body": "<strong>Apollo Banana Leaf</strong> for authentic Tamil food. <strong>Spice Village</strong> for Kerala dishes. Idli-sambar, chettinad curries available. £10–16/person." },
+    { "icon": "🧁", "area": "All Areas",               "name": "Indian Sweets & Snacks",           "body": "Southall mithai shops: gulab jamun, jalebi, barfi, halwa. Buy boxed sweets to carry to the US. Stock up on Haldiram's and MTR snacks for the journey." },
+    { "icon": "🌱", "area": "Citywide",                "name": "Vegetarian-Friendly London",       "body": "All Indian restaurants mark vegetarian dishes clearly. Jain-friendly options in Wembley and Harrow. Always ask about egg in sauces if strictly vegetarian." }
+  ],
+
+  "essentials": [
+    { "icon": "💷", "title": "Currency & Payments",  "items": ["UK uses <strong>Pound Sterling (GBP)</strong>", "£1 ≈ ₹107–110 (check live rate)", "Cards accepted almost everywhere", "Get £100–200 cash for markets", "Wise card for best INR→GBP rate", "Avoid airport currency exchange"] },
+    { "icon": "📱", "title": "SIM Card & Internet",  "items": ["Buy <strong>Giffgaff or Three SIM</strong> at airport", "£10 gives 10GB data + calls (30 days)", "Airport has free (slow) WiFi", "Most cafes & museums have WiFi", "Airalo eSIM — buy from India before travel"] },
+    { "icon": "🌦️","title": "Weather & Clothing",   "items": ["Always carry a <strong>light jacket</strong>", "Summer: 18–25°C, sometimes sunny", "Winter: 3–10°C, grey and rainy", "Pack a compact umbrella", "Comfortable walking shoes essential"] },
+    { "icon": "🏨", "title": "Overnight Stay",       "items": ["Near Heathrow: Travelodge (£65–80)", "Budget central: Premier Inn Victoria (£80–110)", "Best access: Paddington area", "Book on Booking.com (Indian payments work)", "Check-in 3 PM; luggage storage earlier"] },
+    { "icon": "🔌", "title": "Plugs & Adapters",     "items": ["UK uses <strong>Type G plugs</strong> (3 square pins)", "Indian chargers do NOT fit", "Buy adapter at Heathrow (~£8–12)", "Voltage: 230V (same as India)", "No voltage converter needed"] },
+    { "icon": "🚨", "title": "Safety & Emergency",   "items": ["UK is very safe for tourists", "Emergency: <strong>999</strong> (police/fire/ambulance)", "Non-emergency police: <strong>101</strong>", "Beware pickpockets on Oxford St", "Indian High Commission: +44 20 7836 8484"] },
+    { "icon": "✈️", "title": "UK Airports",          "items": ["<strong>Heathrow (LHR)</strong> — 5 terminals", "<strong>Gatwick (LGW)</strong> — 45 mins south", "<strong>Manchester (MAN)</strong> — North England", "Check your departure terminal carefully", "Arrive 3 hours before international flight"] },
+    { "icon": "🛍️","title": "What to Buy",          "items": ["<strong>Primark</strong> — Budget clothing (unique to UK)", "<strong>M&S</strong> — Food gifts, tea, biscuits", "<strong>Boots</strong> — No7 skincare, vitamins", "<strong>Harrods</strong> — Luxury gifts", "VAT refund on purchases over £30"] }
+  ],
+
+  "tips": [
+    { "icon": "⏰", "title": "Add 2 Hours Buffer",       "body": "UK immigration can take 60–90 mins. Always add 2 hr buffer on each end of your stopover — never assume a quick exit." },
+    { "icon": "💳", "title": "Carry a Wise Card",        "body": "Best INR-to-GBP rate with no hidden fees. Load it from India before travel. Works at all UK ATMs and shops." },
+    { "icon": "📸", "title": "Pre-Book Attractions",     "body": "London Eye and Tower of London have long queues. Book 24–48 hours online to save time and money — sometimes 20% off." },
+    { "icon": "🌧️","title": "Pack an Umbrella",        "body": "London rain is light but frequent. A small travel umbrella is essential. Don't let a shower ruin your sightseeing plans." },
+    { "icon": "🚶", "title": "Walk More, Tube Less",     "body": "Many attractions are walking distance from each other. The tube map looks huge but walking between stops is often faster." },
+    { "icon": "📵", "title": "Download Offline Maps",   "body": "Download Google Maps for London offline before arriving. UK roaming on Indian SIMs is expensive. Use airport WiFi to download." },
+    { "icon": "🛂", "title": "Keep Documents Handy",    "body": "Keep onward flight ticket and visa easily accessible. UK Border Force may ask for proof of onwards travel at entry." },
+    { "icon": "🍵", "title": "Try British Experiences", "body": "Ride a red double-decker bus, see a red phone box, have fish & chips. These small moments are uniquely British." },
+    { "icon": "🇺🇸","title": "US Customs Alert",        "body": "US Customs is strict — don't bring fruits, vegetables, or dairy from the UK into the USA. Declare all food items." },
+    { "icon": "🌐", "title": "Share Your Journey",      "body": "London is incredibly photogenic. Plan your must-have shots — Tower Bridge, Big Ben, red bus on Westminster Bridge." }
+  ]
+}
