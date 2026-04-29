@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bgG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D1B3E"/>
+      <stop offset="100%" stop-color="#012169"/>
+    </linearGradient>
+    <linearGradient id="vG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E8650A"/>
+      <stop offset="60%" stop-color="#D4A017"/>
+      <stop offset="100%" stop-color="#E8650A"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="200" fill="url(#bgG)"/>
+
+  <!-- Outer gold ring -->
+  <circle cx="200" cy="200" r="192" fill="none" stroke="#D4A017" stroke-width="2.5"/>
+
+  <!-- Inner faint ring -->
+  <circle cx="200" cy="200" r="183" fill="none" stroke="#D4A017" stroke-width="0.8" opacity="0.25"/>
+
+  <!-- The V — bold, confident, centred slightly high -->
+  <path d="M 92 110 L 200 272 L 308 110"
+        fill="none"
+        stroke="url(#vG)"
+        stroke-width="22"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        filter="url(#glow)"/>
+
+  <!-- Plane silhouette departing from top-right of the V -->
+  <g transform="translate(301,103) rotate(135)">
+    <!-- fuselage -->
+    <ellipse cx="0" cy="0" rx="13" ry="5" fill="white" opacity="0.92"/>
+    <!-- nose -->
+    <ellipse cx="12" cy="0" rx="4" ry="3.5" fill="white" opacity="0.92"/>
+    <!-- main wings -->
+    <path d="M -2,-1 L -18,-16 L -12,0 Z" fill="white" opacity="0.78"/>
+    <path d="M -2,1  L -18,16  L -12,0 Z" fill="white" opacity="0.78"/>
+    <!-- tail wings -->
+    <path d="M -10,-1 L -18,-9 L -13,-1 Z" fill="white" opacity="0.55"/>
+    <path d="M -10, 1 L -18, 9 L -13, 1 Z" fill="white" opacity="0.55"/>
+  </g>
+
+  <!-- Dotted flight-path trail behind plane -->
+  <g opacity="0.35">
+    <circle cx="290" cy="95"  r="2" fill="#D4A017"/>
+    <circle cx="278" cy="88"  r="1.5" fill="#D4A017"/>
+    <circle cx="266" cy="83"  r="1" fill="#D4A017"/>
+  </g>
+
+  <!-- Separator rule with diamond centre -->
+  <line x1="72" y1="303" x2="168" y2="303" stroke="#D4A017" stroke-width="0.8" opacity="0.55"/>
+  <polygon points="200,297 206,303 200,309 194,303" fill="#D4A017" opacity="0.8"/>
+  <line x1="232" y1="303" x2="328" y2="303" stroke="#D4A017" stroke-width="0.8" opacity="0.55"/>
+
+  <!-- VAARADHI wordmark -->
+  <text x="200" y="294"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="28" font-weight="700"
+        fill="white" text-anchor="middle"
+        letter-spacing="6">VAARADHI</text>
+
+  <!-- TOURS sub-brand -->
+  <text x="200" y="325"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="13" font-weight="700"
+        fill="#D4A017" text-anchor="middle"
+        letter-spacing="10">TOURS</text>
+
+  <!-- Tagline -->
+  <text x="200" y="348"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="9" font-weight="400"
+        fill="rgba(255,255,255,0.38)" text-anchor="middle"
+        letter-spacing="3.5">UK STOPOVER GUIDE</text>
+
+  <!-- Four cardinal dots on the outer ring -->
+  <circle cx="200" cy="10"  r="3" fill="#D4A017" opacity="0.5"/>
+  <circle cx="200" cy="390" r="3" fill="#D4A017" opacity="0.5"/>
+  <circle cx="10"  cy="200" r="3" fill="#D4A017" opacity="0.5"/>
+  <circle cx="390" cy="200" r="3" fill="#D4A017" opacity="0.5"/>
+</svg>

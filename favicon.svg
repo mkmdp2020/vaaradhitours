@@ -1,11 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <circle cx="50" cy="50" r="50" fill="#012169"/>
-  <circle cx="50" cy="50" r="42" fill="url(#g)"/>
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FF6B00"/>
-      <stop offset="100%" style="stop-color:#D4A017"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D1B3E"/>
+      <stop offset="100%" stop-color="#012169"/>
+    </linearGradient>
+    <linearGradient id="vg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E8650A"/>
+      <stop offset="100%" stop-color="#D4A017"/>
     </linearGradient>
   </defs>
-  <text x="50" y="67" font-family="Arial" font-weight="900" font-size="52" fill="white" text-anchor="middle">V</text>
+  <circle cx="50" cy="50" r="50" fill="url(#bg)"/>
+  <circle cx="50" cy="50" r="47" fill="none" stroke="#D4A017" stroke-width="1.2"/>
+  <path d="M 22 26 L 50 70 L 78 26"
+        fill="none" stroke="url(#vg)" stroke-width="7"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- tiny plane at top right -->
+  <g transform="translate(74,24) rotate(135)">
+    <ellipse cx="0" cy="0" rx="5" ry="2" fill="white" opacity="0.9"/>
+    <path d="M -1,0 L -7,-5 L -5,0 Z" fill="white" opacity="0.7"/>
+    <path d="M -1,0 L -7, 5 L -5,0 Z" fill="white" opacity="0.7"/>
+  </g>
 </svg>

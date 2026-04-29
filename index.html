@@ -322,7 +322,7 @@ footer p{font-size:14px;line-height:1.85}
 <div id="loading"><div class="spin"></div></div>
 
 <nav>
-  <a href="#" class="nb"><div class="nb-logo">V</div><span class="nb-name">Vaaradhi Tours</span></a>
+  <a href="#" class="nb"><img src="/logo.svg" style="width:36px;height:36px;border-radius:50%;" alt="Vaaradhi Tours"/><span class="nb-name">Vaaradhi Tours</span></a>
   <div class="nm">
     <a href="#visa">Visa</a>
     <a href="#budget">Costs</a>
@@ -434,8 +434,12 @@ function renderBudget(d) {
   const cards = d.categories.map(c=>`
     <div class="budget-card">
       <div class="bi">${c.icon}</div>
-      <div class="btype" style="color:${c.color.replace('#','#')}aa">${esc(c.type)}</div>
-      <div class="brange">${esc(c.range)}</div>
+      <div class="btype">${esc(c.type)}</div>
+      <div class="brange">${esc(c.range)}<span style="font-size:13px;font-weight:400;opacity:.6;font-family:Inter,sans-serif"> /person/day</span></div>
+      <div style="font-size:13px;color:rgba(255,213,128,.75);margin-bottom:18px;display:flex;align-items:center;gap:6px">
+        <span style="font-size:16px">👨‍👩‍👧‍👦</span>
+        <span><strong style="color:#FFD580">${esc(c.family)}</strong> &nbsp;family of 4</span>
+      </div>
       <ul>${c.includes.map(i=>`<li>${esc(i)}</li>`).join('')}</ul>
     </div>`).join('');
   $('budget-wrap').innerHTML = `
@@ -789,14 +793,43 @@ const DATA = {
     "warning": "🔴 Always verify requirements at gov.uk — Vaaradhi Tours provides guidance only and is not a visa service."
   },
   "budget": {
-    "title": "How Much Will It Cost? Daily Budget Guide",
-    "subtitle": "London is expensive but manageable. Here's a realistic breakdown of what a day costs depending on your style.",
-    "note": "All prices in GBP. £1 ≈ ₹107–110. Book attractions online for 10–20% discount.",
+    "title": "What Will It Cost? Honest Daily Budget",
+    "subtitle": "London is expensive — but very manageable with the right plan. Here's a realistic, honest breakdown for solo travellers and families.",
+    "note": "All prices in GBP (2025). £1 ≈ ₹107–112. Family = 2 adults + 2 children (under 11 travel FREE on all TfL transport). Book paid attractions online — always 10–20% cheaper.",
     "categories": [
-      { "type": "Budget",     "icon": "🎒", "range": "£60–80 / day",   "color": "#2d7a2d", "includes": ["Airport capsule / Travelodge hotel: £55–70","Oyster card travel (Zone 1–2): £8–10","Street food / market meals: £8–15","Free museums only (British Museum, V&A)","Coffee & snacks: £5–8"] },
-      { "type": "Mid-Range",  "icon": "🧳", "range": "£120–180 / day", "color": "#1a5fa8", "includes": ["Premier Inn / ibis hotel: £85–120","Day Travelcard Zone 1–2: £14.90","Casual restaurant meals: £20–35","1–2 paid attractions (e.g. London Eye £33)","Coffee, transport extras: £15–20"] },
-      { "type": "Comfortable","icon": "🏨", "range": "£200–320 / day", "color": "#7a3a00", "includes": ["3-star central hotel: £140–200","Day Travelcard + occasional Uber: £20–35","Restaurant dining (2 meals): £40–60","2–3 paid attractions: £50–80","Shopping budget: £30–50"] },
-      { "type": "Luxury",     "icon": "✨", "range": "£400+ / day",    "color": "#6a1a6a", "includes": ["4–5 star hotel (Sofitel, Hilton): £200–400","Private transfers / black cabs: £50–100","Fine dining restaurants: £80–150","Premium experiences (Harry Potter, etc.): £55–100","Shopping & gifts: £100+"] }
+      {
+        "type": "Budget", "icon": "🎒", "range": "£65–85", "family": "£180–260", "color": "#2d7a2d",
+        "includes": [
+          "Travelodge / ibis / capsule hotel near airport: £50–75/night",
+          "Oyster card Zone 1–2 daily cap: £8.10/person",
+          "Pret a Manger / Greggs / supermarket meal deal: £4–9",
+          "Borough Market street food for lunch: £8–12",
+          "Free attractions only: British Museum, Tate Modern, V&A, Hyde Park",
+          "Coffee & snacks: £5–8"
+        ]
+      },
+      {
+        "type": "Comfortable", "icon": "🏨", "range": "£180–280", "family": "£520–800", "color": "#7a4500",
+        "includes": [
+          "3-star central hotel (Premier Inn Hub, Point A): £120–180/night",
+          "Off-Peak Day Travelcard Zone 1–2: £14.90/person",
+          "Casual restaurant lunch + dinner: £35–55/person",
+          "2 paid attractions: London Eye (£36) + Tower of London (£35): £71",
+          "Thames Clipper river cruise: £19.80 all-day",
+          "Shopping & gifts budget: £30–60"
+        ]
+      },
+      {
+        "type": "Luxury", "icon": "✨", "range": "£400–700+", "family": "£1,400–2,500+", "color": "#6a1a6a",
+        "includes": [
+          "5-star hotel (Sofitel Heathrow, The Savoy, Marriott): £280–600+/night",
+          "Private airport transfers & black cabs throughout: £80–150",
+          "Fine dining — Gymkhana, Quilon, Benares (Michelin-starred): £100–200/person",
+          "Warner Bros Harry Potter Studio tour: £55/adult, £47/child",
+          "London Eye VIP private pod with Champagne: £100/person",
+          "Afternoon Tea at The Ritz or Claridge's: £75–95/person"
+        ]
+      }
     ]
   },
   "airports": [
@@ -807,10 +840,11 @@ const DATA = {
       "terminals": "5 terminals: T2, T3, T4, T5 (all connected by free rail shuttle)",
       "airlines": "All major international carriers including Air India, IndiGo, British Airways, Virgin Atlantic",
       "transport": [
-        { "name": "Elizabeth Line (Tube)", "duration": "45–55 min", "cost": "£5.60",   "frequency": "Every 10 min", "notes": "Best value. Direct to Paddington, Bond St, Liverpool St" },
-        { "name": "Heathrow Express",      "duration": "15 min",    "cost": "£25–37",  "frequency": "Every 15 min", "notes": "Fastest. Paddington only. Book online for cheaper fares" },
-        { "name": "National Express",      "duration": "60–90 min", "cost": "£10–16",  "frequency": "Every 30 min", "notes": "Cheapest to Victoria Coach Station. Slower in traffic" },
-        { "name": "Uber / Taxi",           "duration": "45–75 min", "cost": "£40–70",  "frequency": "On demand",    "notes": "Good for groups 3+. Uber accepts Indian cards" }
+        { "name": "Piccadilly Line (Tube)", "duration": "50–60 min", "cost": "~£5.50", "frequency": "Every 5–10 min", "notes": "Best value. Standard Zone 1–6 Oyster/contactless fare. Stops at Knightsbridge, Hyde Park Corner, Green Park, Piccadilly Circus, King's Cross. Slow but cheap." },
+        { "name": "Elizabeth Line (Crossrail)", "duration": "37–45 min", "cost": "£12–13", "frequency": "Every 10 min", "notes": "Faster & more spacious than Tube. Heathrow premium surcharge applies — NOT the standard zone fare. Direct to Paddington, Bond St, Tottenham Court Rd, Liverpool St." },
+        { "name": "Heathrow Express", "duration": "15 min", "cost": "£25–37", "frequency": "Every 15 min", "notes": "Fastest option. Paddington Station only. Book online 2+ days ahead for best prices. Business First carriages available." },
+        { "name": "National Express Bus", "duration": "60–90 min", "cost": "£10–16", "frequency": "Every 30 min", "notes": "Cheapest to Victoria Coach Station. Book ahead online. Comfortable coaches, slower in peak traffic." },
+        { "name": "Uber / Taxi", "duration": "45–75 min", "cost": "£40–70", "frequency": "On demand", "notes": "Good value for groups of 3–4. Uber accepts Indian debit/credit cards. Can be slow in peak traffic." }
       ],
       "facilities": ["Free WiFi throughout","Luggage storage: £8–14/bag/day","Shower facilities at T5 (£15–25)","Prayer rooms in all terminals","Indian restaurants at T2 and T4","Currency exchange (better rates in city)","Pharmacy & medical centre","Hotels on-site (T4, T5)"],
       "nearby_hotels": [
@@ -896,15 +930,15 @@ const DATA = {
       ]
     },
     "caps": [
-      { "zones": "Zone 1–2 (Central London)", "daily_peak": "£8.10",  "daily_offpeak": "£8.10",  "weekly": "£40.70", "notes": "Covers almost all tourist attractions" },
-      { "zones": "Zone 1–3",                  "daily_peak": "£10.00", "daily_offpeak": "£10.00", "weekly": "£50.10", "notes": "Covers Kew Gardens, parts of south London" },
-      { "zones": "Zone 1–6 (Heathrow)",       "daily_peak": "£15.60", "daily_offpeak": "£15.60", "weekly": "£74.40", "notes": "Use this if going to/from Heathrow on the Tube" }
+      { "zones": "Zone 1–2 (Central London)", "daily_peak": "£8.10",  "daily_offpeak": "£8.10",  "weekly": "£40.70", "notes": "Covers all major attractions: Big Ben, London Eye, British Museum, Covent Garden" },
+      { "zones": "Zone 1–3",                  "daily_peak": "£10.00", "daily_offpeak": "£10.00", "weekly": "£50.10", "notes": "Covers Kew Gardens, Wimbledon, parts of south London" },
+      { "zones": "Zone 1–6 (Heathrow Tube)",  "daily_peak": "£15.60", "daily_offpeak": "£15.60", "weekly": "£74.40", "notes": "Use when travelling to/from Heathrow on the Piccadilly Line only. Elizabeth Line has separate Heathrow surcharge (~£12–13)." }
     ],
     "travelcards": [
-      { "name": "1-Day Travelcard (Anytime)",  "zones": "Zone 1–2", "cost": "£15.60", "best_for": "Unlimited travel all day including peak hours. Good if making 3+ journeys" },
-      { "name": "1-Day Travelcard (Off-Peak)", "zones": "Zone 1–2", "cost": "£14.90", "best_for": "Valid after 09:30 weekdays, anytime weekends. Best value for sightseers" },
-      { "name": "7-Day Travelcard",            "zones": "Zone 1–2", "cost": "£40.70", "best_for": "For 2-day stopovers — cheaper than 2 daily caps" },
-      { "name": "Visitor Oyster Card",         "zones": "All zones","cost": "£3 + credit", "best_for": "Pre-loaded card delivered before travel. Same as regular Oyster" }
+      { "name": "1-Day Travelcard (Anytime)",  "zones": "Zone 1–2", "cost": "£15.60", "best_for": "Unlimited travel all day including peak hours. Good value if making 3+ tube journeys" },
+      { "name": "1-Day Travelcard (Off-Peak)", "zones": "Zone 1–2", "cost": "£14.90", "best_for": "Valid after 09:30 on weekdays, all day on weekends. Best choice for most stopover visitors" },
+      { "name": "7-Day Travelcard",            "zones": "Zone 1–2", "cost": "£40.70", "best_for": "2-day stopovers: cheaper than two separate daily caps. Loads to Oyster card at any station." },
+      { "name": "Contactless Bank Card",       "zones": "All zones","cost": "Same as Oyster", "best_for": "Simplest option — tap your Visa/Mastercard directly. Daily cap applies automatically. No deposit." }
     ],
     "modes": [
       { "icon": "🚇", "name": "London Underground (Tube)",     "coverage": "11 lines, 272 stations", "hours": "Mon–Sat: 5am–1am, Sun: 6:30am–midnight (24hr Fri/Sat on some lines)", "tip": "Use Zone 1 lines: Central, Jubilee, Northern, Piccadilly. Download the TfL Go app" },
