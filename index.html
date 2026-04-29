@@ -13,7 +13,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --o:#E8650A;--r:#C8102E;--b:#012169;--gold:#D4A017;--gold-lt:#FFD580;
-  --dk:#0D1B3E;--tx:#1e2535;--mu:#5a6378;--bg:#F5F4F1;--card:#ffffff;--bd:#E2DDD6;
+  --dk:#0D1B3E;--tx:#1e2535;--mu:#5a6378;--bg:#F0EAD6;--card:#ffffff;--bd:#E2DDD6;
   --radius:18px;--shadow:0 2px 16px rgba(13,27,62,.07);--shadow-md:0 6px 32px rgba(13,27,62,.12);--shadow-lg:0 16px 56px rgba(13,27,62,.18)
 }
 html{scroll-behavior:smooth}
@@ -39,50 +39,62 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 @media(max-width:900px){.nm{display:none}nav{padding:0 20px}}
 
 /* ── HERO ── */
-.hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:80px 24px}
-.hero-bg{position:absolute;inset:0;background:
-  linear-gradient(160deg,#0D1B3E 0%,#012169 45%,#0d3575 75%,#1a1040 100%)}
-.hero-bg::after{
-  content:'';position:absolute;inset:0;
-  background-image:url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1800&q=85');
-  background-size:cover;background-position:center;
-  opacity:.18;mix-blend-mode:luminosity
-}
+.hero{min-height:100vh;position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;overflow:hidden;padding:100px 7% 80px;gap:60px}
+@media(max-width:960px){.hero{grid-template-columns:1fr;padding:100px 24px 64px;gap:40px}}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(160deg,#0D1B3E 0%,#012169 45%,#0d3575 75%,#1a1040 100%)}
+.hero-bg::after{content:'';position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1800&q=85');background-size:cover;background-position:center;opacity:.18;mix-blend-mode:luminosity}
 .hero-orbs{position:absolute;inset:0;overflow:hidden;pointer-events:none}
 .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.25}
-.orb1{width:600px;height:600px;background:var(--o);top:-200px;right:-150px}
+.orb1{width:600px;height:600px;background:var(--o);top:-200px;right:-50px}
 .orb2{width:400px;height:400px;background:#4a90d9;bottom:-100px;left:-100px}
-.orb3{width:300px;height:300px;background:var(--gold);bottom:100px;right:200px;opacity:.15}
-.hero-inner{position:relative;z-index:1;max-width:820px;text-align:center}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.9);padding:7px 18px;border-radius:100px;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;margin-bottom:32px;backdrop-filter:blur(10px)}
+.orb3{width:300px;height:300px;background:var(--gold);bottom:100px;right:100px;opacity:.15}
+.hero-inner{position:relative;z-index:1}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.9);padding:7px 18px;border-radius:100px;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;margin-bottom:28px;backdrop-filter:blur(10px)}
 .hero-eyebrow span{width:6px;height:6px;border-radius:50%;background:var(--gold-lt);display:inline-block;animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(40px,6.5vw,76px);color:#fff;line-height:1.08;margin-bottom:26px;letter-spacing:-.5px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,4.8vw,62px);color:#fff;line-height:1.1;margin-bottom:20px;letter-spacing:-.5px}
 .hero h1 em{font-style:normal;color:var(--gold-lt)}
-.hero h1 strong{font-style:normal;display:block;background:linear-gradient(90deg,var(--gold-lt),#fff,var(--gold-lt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-sub{font-size:clamp(16px,2vw,19px);color:rgba(255,255,255,.75);max-width:600px;margin:0 auto 44px;font-weight:300;line-height:1.75}
-.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:16px}
-.hero-quick{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:52px}
+.hero h1 strong{font-style:normal;display:block;color:#fff}
+.hero-sub{font-size:clamp(14px,1.6vw,17px);color:rgba(255,255,255,.72);max-width:520px;margin-bottom:36px;font-weight:400;line-height:1.78}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.hero-quick{display:flex;gap:8px;flex-wrap:wrap}
 .hero-quick a{color:rgba(255,255,255,.75);font-size:13px;font-weight:500;padding:7px 16px;border-radius:100px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);transition:all .18s;white-space:nowrap}
 .hero-quick a:hover{background:rgba(255,255,255,.16);color:#fff;transform:translateY(-1px)}
-.btn{padding:15px 34px;border-radius:12px;font-weight:700;font-size:15px;transition:all .22s;display:inline-flex;align-items:center;gap:8px;cursor:pointer;letter-spacing:.1px}
+.btn{padding:14px 30px;border-radius:12px;font-weight:700;font-size:15px;transition:all .22s;display:inline-flex;align-items:center;gap:8px;cursor:pointer;letter-spacing:.1px}
 .btn-p{background:linear-gradient(135deg,var(--o),#d44f00);color:#fff;box-shadow:0 6px 28px rgba(232,101,10,.5)}
 .btn-p:hover{transform:translateY(-3px);box-shadow:0 10px 36px rgba(232,101,10,.6)}
 .btn-s{background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.3);backdrop-filter:blur(8px)}
 .btn-s:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
-.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.1);border-radius:var(--radius);overflow:hidden;max-width:680px;margin:0 auto}
-@media(max-width:600px){.hero-stats{grid-template-columns:repeat(2,1fr)}}
-.stat{background:rgba(255,255,255,.06);padding:22px 16px;text-align:center;backdrop-filter:blur(8px)}
-.stat .n{font-family:'Playfair Display',serif;font-size:32px;font-weight:800;color:var(--gold-lt);line-height:1}
-.stat .l{font-size:11px;color:rgba(255,255,255,.55);margin-top:6px;letter-spacing:.3px;line-height:1.4}
-.hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:1;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.3);font-size:11px;letter-spacing:.5px}
+/* right panel — Route Board */
+.hero-right{position:relative;z-index:1}
+@media(max-width:960px){.hero-right{display:none}}
+.route-board{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:30px;backdrop-filter:blur(24px)}
+.route-board-hdr{font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.route-board-hdr::before{content:'';width:20px;height:1px;background:rgba(255,255,255,.3);display:inline-block}
+.route-item{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.route-item:last-of-type{border-bottom:none;padding-bottom:0}
+.route-num{min-width:32px;height:32px;border-radius:50%;background:var(--o);color:#fff;font-weight:900;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 14px rgba(232,101,10,.45);margin-top:1px}
+.route-item-body h4{font-size:14px;font-weight:700;color:#fff;margin-bottom:4px;letter-spacing:-.1px}
+.route-item-body p{font-size:12px;color:rgba(255,255,255,.52);line-height:1.55}
+.route-board-cta{margin-top:22px;display:flex;gap:10px}
+.hero-scroll{position:absolute;bottom:32px;left:7%;z-index:1;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.3);font-size:11px;letter-spacing:.5px}
 .hero-scroll::after{content:'';width:1px;height:36px;background:linear-gradient(to bottom,rgba(255,255,255,.3),transparent)}
+/* ── STATS BAR ── */
+.stats-bar{background:#fff;border-bottom:1px solid var(--bd)}
+.stats-row{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+@media(max-width:700px){.stats-row{grid-template-columns:repeat(2,1fr)}}
+.stat-card{display:flex;align-items:center;gap:16px;padding:22px 28px;border-right:1px solid var(--bd)}
+.stat-card:last-child{border-right:none}
+@media(max-width:700px){.stat-card:nth-child(2n){border-right:none}.stat-card:nth-child(3),.stat-card:nth-child(4){border-top:1px solid var(--bd)}}
+.stat-icon{font-size:28px;flex-shrink:0}
+.stat-card .n{font-family:'Playfair Display',serif;font-size:26px;font-weight:800;color:var(--dk);line-height:1}
+.stat-card .l{font-size:12px;color:var(--mu);margin-top:4px;line-height:1.4}
 
 /* ── SECTIONS ── */
 section{padding:56px 20px}
 .c{max-width:1160px;margin:0 auto}
 .s-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(232,101,10,.08);color:var(--o);border:1px solid rgba(232,101,10,.2);padding:4px 12px;border-radius:100px;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:12px}
-.s-title{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,40px);color:var(--dk);margin-bottom:10px;line-height:1.15;letter-spacing:-.3px}
+.s-title{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,48px);font-weight:800;color:var(--dk);margin-bottom:12px;line-height:1.1;letter-spacing:-.5px}
 .s-sub{font-size:15px;color:var(--mu);max-width:600px;line-height:1.7}
 .s-head{margin-bottom:36px}
 
@@ -375,10 +387,12 @@ const esc = s => String(s||'').replace(/&(?!amp;|lt;|gt;|quot;)/g,'&amp;').repla
 // ── RENDER FUNCTIONS ──────────────────────────────────────────────────────────
 
 function renderHero(d) {
+  const statIcons = ['✈️','⏱️','💷','📋'];
   $('hero-wrap').innerHTML = `
   <div class="hero">
     <div class="hero-bg"></div>
     <div class="hero-orbs"><div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div></div>
+    <!-- left column -->
     <div class="hero-inner">
       <div class="hero-eyebrow"><span></span>🇬🇧 ${esc(d.badge)}</div>
       <h1><em>${esc(d.title)}</em><strong>${esc(d.titleHighlight)}</strong></h1>
@@ -394,11 +408,39 @@ function renderHero(d) {
         <a href="#food">🍽️ Where to Eat</a>
         <a href="#tours">🎟️ Guided Tours</a>
       </div>
-      <div class="hero-stats">
-        ${d.stats.map(s=>`<div class="stat"><div class="n">${esc(s.value)}</div><div class="l">${esc(s.label)}</div></div>`).join('')}
+    </div>
+    <!-- right column — Route Board -->
+    <div class="hero-right">
+      <div class="route-board">
+        <div class="route-board-hdr">Live Route Board</div>
+        <div class="route-item">
+          <div class="route-num">1</div>
+          <div class="route-item-body"><h4>8-Hour Heathrow Express Route</h4><p>Westminster → South Bank → Borough Market → back by 5 PM</p></div>
+        </div>
+        <div class="route-item">
+          <div class="route-num">2</div>
+          <div class="route-item-body"><h4>Walkable Westminster Highlights</h4><p>Big Ben, Westminster Bridge, Tate Modern — completely free</p></div>
+        </div>
+        <div class="route-item">
+          <div class="route-num">3</div>
+          <div class="route-item-body"><h4>Tower Bridge &amp; Riverside Walk</h4><p>Tower of London, Thames Path, Borough Market nearby</p></div>
+        </div>
+        <div class="route-item" style="border-bottom:none;padding-bottom:0">
+          <div class="route-num">4</div>
+          <div class="route-item-body"><h4>Beyond London by Train</h4><p>Bath (1h 25m) · Oxford (1h) · Windsor (25 min)</p></div>
+        </div>
+        <div class="route-board-cta">
+          <a href="#iti" class="btn btn-p" style="font-size:13px;padding:11px 22px">Plan My Stopover →</a>
+          <a href="#attractions" class="btn btn-s" style="font-size:13px;padding:11px 22px">Historic Sites</a>
+        </div>
       </div>
     </div>
     <div class="hero-scroll">SCROLL</div>
+  </div>
+  <div class="stats-bar">
+    <div class="stats-row">
+      ${d.stats.map((s,i)=>`<div class="stat-card"><div class="stat-icon">${statIcons[i]||'📌'}</div><div><div class="n">${esc(s.value)}</div><div class="l">${esc(s.label)}</div></div></div>`).join('')}
+    </div>
   </div>`;
 }
 
